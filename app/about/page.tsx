@@ -5,11 +5,11 @@ export default function AboutPage() {
   return (
     <div className="py-12">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">About Us</h1>
+        <h1 className="text-4xl font-bold mb-8 text-trueblue">About Us</h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           <div>
-            <h2 className="text-2xl font-bold mb-4">Our History</h2>
+            <h2 className="text-2xl font-bold mb-4 text-trueblue">Our History</h2>
             <p className="text-muted-foreground mb-4">
               Cornerstone Education Centre was founded by Rev Prof Diphus Chemorion and Rev Dr Edith Chemorion on January 12, 2015. The centre was fully registered by the State Department of Education on May 20, 2021.
             </p>
@@ -17,13 +17,12 @@ export default function AboutPage() {
               Located in Cheptais Township on the slopes of Mt. Elgon, Bungoma County, our institution is founded on Christian Principles aligned to the doctrines of the Reformed Church and Christian values.
             </p>
           </div>
-          <div>
+          <div className="relative h-[300px]">
             <Image
-              src="/placeholder.svg?height=300&width=500"
-              alt="School building"
-              width={500}
-              height={300}
-              className="rounded-lg"
+              src="/about-image.jpg"
+              alt="Cornerstone Education Centre Building"
+              fill
+              className="rounded-lg object-cover"
             />
           </div>
         </div>
@@ -31,7 +30,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <Card>
             <CardContent className="pt-6">
-              <h3 className="font-bold text-xl mb-2">Our Identity</h3>
+              <h3 className="font-bold text-xl mb-2 text-trueblue">Our Identity</h3>
               <p className="text-muted-foreground">
                 The name is derived from Acts 4:11 where Jesus is described as the cornerstone. We welcome pupils from all faiths while maintaining our Christian foundation.
               </p>
@@ -39,7 +38,7 @@ export default function AboutPage() {
           </Card>
           <Card>
             <CardContent className="pt-6">
-              <h3 className="font-bold text-xl mb-2">Our Philosophy</h3>
+              <h3 className="font-bold text-xl mb-2 text-trueblue">Our Philosophy</h3>
               <p className="text-muted-foreground">
                 We believe in providing quality education through creative methods of mentoring and spiritual formation, fostering both academic excellence and character development.
               </p>
@@ -47,7 +46,7 @@ export default function AboutPage() {
           </Card>
           <Card>
             <CardContent className="pt-6">
-              <h3 className="font-bold text-xl mb-2">Our Commitment</h3>
+              <h3 className="font-bold text-xl mb-2 text-trueblue">Our Commitment</h3>
               <p className="text-muted-foreground">
                 We are committed to maintaining high standards of education while nurturing each student's God-given talents in a safe and supportive environment.
               </p>
@@ -55,9 +54,9 @@ export default function AboutPage() {
           </Card>
         </div>
 
-        <div className="bg-gray-50 p-8 rounded-lg">
-          <h2 className="text-2xl font-bold mb-4">Our Objectives</h2>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-disc list-inside">
+        <div className="bg-gray-50 p-8 rounded-lg border">
+          <h2 className="text-2xl font-bold mb-4 text-trueblue">Our Objectives</h2>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-disc list-inside text-muted-foreground">
             <li>Offer quality transformative education at an affordable cost</li>
             <li>Provide a conducive and safe Christian learning environment</li>
             <li>Foster academic excellence and Spiritual growth</li>
@@ -69,4 +68,3 @@ export default function AboutPage() {
     </div>
   )
 }
-

@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Button } from "@/components/ui/button"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,11 +12,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/logo.svg"
+              src="/logo.png"
               alt="Cornerstone Education Centre Logo"
               width={240}
               height={240}
-              priority
+              className="w-[120px] h-[120px]"
             />
             <div className="flex flex-col">
               <span className="font-bold text-lg">CORNERSTONE</span>
@@ -28,6 +29,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <Link href="/academics" className="hover:text-white">Academics</Link>
             <Link href="/admissions" className="hover:text-white">Admissions</Link>
             <Link href="/contact" className="hover:text-white">Contact</Link>
+            <Button asChild variant="secondary" className="bg-brickred hover:bg-brickred/90">
+              <Link href="/donate">Donate</Link>
+            </Button>
           </div>
         </nav>
       </header>
